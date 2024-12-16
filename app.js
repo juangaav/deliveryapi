@@ -22,9 +22,9 @@ app.use('*',
 
 app.use(globalErrorHandler);
 
-console.log('env port', process.env.APP_PORT);
+console.log('env port', process.env.PORT);
 
-const PORT = process.env.APP_PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
     console.log('Server up and running', PORT);
