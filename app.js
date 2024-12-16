@@ -22,7 +22,7 @@ app.use('*',
 
 app.use(globalErrorHandler);
 
-const PORT = process.env.APP_PORT || 4000;
+const PORT = process.env.APP_PORT || 3000;
 
 app.listen(PORT, () => {
     console.log('Server up and running', PORT);
