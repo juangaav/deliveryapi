@@ -22,6 +22,8 @@ app.use('*',
 
 app.use(globalErrorHandler);
 
+console.log('env port', process.env.APP_PORT);
+
 const PORT = process.env.APP_PORT || 4000;
 
 app.listen(PORT, () => {
