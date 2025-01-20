@@ -1,12 +1,14 @@
 require('dotenv').config({path: `${process.cwd()}/.env`}); //process.cwd() returns the value of directory where we run the node process
-const express = require('express')
-
+const express = require('express');
+var cors = require('cors');
 const authRouter = require('./route/authRoute');
 const catchAsync = require('./utils/catchAsync');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
